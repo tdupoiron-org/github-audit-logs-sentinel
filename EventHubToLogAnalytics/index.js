@@ -41,9 +41,9 @@ async function run (context, eventHubMessages) {
             body: message 
         }, function (error, response){
             if (error){
-                console.log(error)
+                context.log(error)
             } else {
-                console.log(response.statusCode + "   " + response.statusMessage)
+                context.log(response.statusCode + "   " + response.statusMessage)
             }
   
       });
